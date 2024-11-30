@@ -1,0 +1,64 @@
+{
+  "blogData": [
+    {
+      "id": 1,
+      "category": "Latest",
+      "image": "blogDummy.jpg",
+      "title": "Firefox Quantum: A Fast and Efficient Web Browsing Experience",
+      "description": "Dive into the remarkable speed and efficiency of Mozilla's Firefox Quantum browser, redefining user experiences across the internet with its lightning-fast..",
+      "author": "By : Sarah J.",
+      "time": "Just Now",
+      "url": "www.apple.com"
+    },
+    {
+      "id": 2,
+      "category": "Tips",
+      "image": "blogDummy.jpg",
+      "title": "Web Security 101: Protecting Your Digital Life",
+      "description": "Learn essential web security practices and discover the tools and techniques to safeguard your digital presence effectively, ensuring a safer online experience.",
+      "author": "By : Sarah J.",
+      "time": "Just Now",
+      "url": "www.apple.com"
+    },
+    {
+      "id": 3,
+      "category": "Tricks",
+      "image": "blogDummy.jpg",
+      "title": "Privacy Matters: A Deep Dive into Mozilla's Privacy Initiatives",
+      "description": "Delve into Mozilla's extensive privacy initiatives, projects, and tools aimed at protecting your online data, ensuring your privacy in the digital world.",
+      "author": "By : Sarah J.",
+      "time": "Just Now",
+      "url": "www.apple.com"
+    },
+    {
+      "id": 4,
+      "category": "Learn",
+      "image": "blogDummy.jpg",
+      "title": "Developing Web Extensions: A Guide for Beginners",
+      "description": "New to web development? This beginner-friendly guide explores creating browser extensions, enhancing your web experience, and contributing to Mozilla's....",
+      "author": "By : Sarah J.",
+      "time": "Just Now",
+      "url": "www.apple.com"
+    },
+    {
+      "id": 5,
+      "category": "Article",
+      "image": "blogDummy.jpg",
+      "title": "Mozilla's Role in Advancing Web Accessibility",
+      "description": "Discover Mozilla's dedication to making the web accessible for everyone through various initiatives and tools, ensuring inclusivity and usability for all.",
+      "author": "By : Sarah J.",
+      "time": "Just Now",
+      "url": "www.apple.com"
+    },
+    {
+      "id": 6,
+      "category": "Entertainment",
+      "image": "blogDummy.jpg",
+      "title": "The Future of WebVR: Virtual Reality in Your Browser",
+      "description": "Gain insight into the fascinating world of WebVR and how Mozilla is pushing the boundaries of virtual reality experiences directly in your web browser.",
+      "author": "By : Sarah J.",
+      "time": "Just Now",
+      "url": "www.apple.com"
+    }
+  ]
+}
