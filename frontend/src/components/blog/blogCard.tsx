@@ -1,26 +1,15 @@
 import React, { useRef, useState } from "react";
 import Image from "next/image";
-import AnimatedButton from "./animatedBtn";
+import AnimatedButton from "../animatedBtn";
 
 interface Props {
   category: string;
   image: string;
   title: string;
-  description: string;
-  author: string;
-  time: string;
   url: string;
 }
 
-const BlogCard: React.FC<Props> = ({
-  category,
-  image,
-  title,
-  description,
-  author,
-  time,
-  url
-}) => {
+const BlogCard: React.FC<Props> = ({ category, image, title, url }) => {
   const [hoverMiddle, setHoverMiddle] = useState(false);
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -94,7 +83,7 @@ const BlogCard: React.FC<Props> = ({
       window.open(url, "_blank");
     } else {
       console.error("Window object not available.");
-      alert("An error occured")
+      alert("An error occured");
     }
   };
   return (
@@ -102,35 +91,29 @@ const BlogCard: React.FC<Props> = ({
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setHoverMiddle(false)}
-      className="h-full m-8 flex w-96 flex-col flex-wrap rounded-3xl  bg-white overflow-y-auto relative group items-center justify-center"
+      className=" h-full m-8 flex w-96 flex flex-wrap rounded-3xl  bg-white overflow-y-auto relative group select-none"
     >
-      <Image
-        src={"/" + image}
-        alt={title}
-        width={350}
-        height={200}
-        className="rounded-xl self-center justify-self-center"
-      />
-      <span
-        className={`${badgeColor} ${badgeTextColor} text-sm md:text-md
-    me-2 px-2.5 py-1.5 rounded-3xl w-fit m-4 text-center  text-ellipsis  h-full`}
-      >
-        {category}
-      </span>
+      <div className="relative">
+        <Image
+          src={"/" + image}
+          alt={title}
+          layout="responsive"
+          width={350}
+          height={200}
+          className="rounded-t-xl self-center justify-self-center"
+        />
+        <span
+          className={`${badgeColor} ${badgeTextColor} text-sm md:text-md
+        absolute bottom-0 right-0 me-2 px-2.5 py-1.5 rounded-3xl w-fit m-4 text-center text-ellipsis h-auto`}
+        >
+          {category}
+        </span>
+      </div>
 
-      <h3 className="text-black font-montserrat mt-4 justify-center px-0.5 text-center text-xl">
+      <h3 className="text-black font-montserrat justify-center px-0.5 text-center text-lg">
         {" "}
         {title}
       </h3>
-      <p className="text-stone-400 font-raleway ml-8 mr-4 mt-4 justify-center text-base ">
-        {description}
-      </p>
-      <p className="text-black text-sm md:text-lg font-medium p-1">
-          {author}
-        </p>
-        <p className="text-stone-400 text-sm md:text-md p-1">
-          {time}
-        </p>
       <div
         className={`absolute inset-0 w-full h-full ${
           hoverMiddle ? "opacity-100" : "opacity-0"

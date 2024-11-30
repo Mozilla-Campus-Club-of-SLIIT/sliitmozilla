@@ -55,8 +55,8 @@ function Header() {
   };
 
   return (
-    <div className="sticky top-0">
-      <nav className="flex items-center justify-between  bg-transparent bg-opacity-30 backdrop-blur-md p-2 ">
+    <div className="sticky top-0 z-50">
+      <nav className="flex items-center justify-between  bg-transparent bg-opacity-30 backdrop-blur-md p-2 shadow-md">
         <div className="w-auto h-auto">
           <Image
             src="/logo-color.png"
@@ -144,11 +144,11 @@ function Header() {
             name="Join SLIIT Mozilla"
             handleButtonClick={handleAboutClick}
           />
-          <FontAwesomeIcon
+          {/* <FontAwesomeIcon
             icon={darkmode ? faSun : faMoon} // Change icon based on dark mode status
             className="w-4 h-4 md:w-6 md:h-6 cursor-pointer text-black m-2 p-2"
             onClick={toggleDarkMode}
-          />
+          /> */}
         </div>
       </nav>
     </div>
