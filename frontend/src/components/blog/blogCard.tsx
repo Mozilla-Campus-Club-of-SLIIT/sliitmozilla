@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import AnimatedButton from "../animatedBtn";
 
@@ -11,33 +11,9 @@ interface Props {
 
 const BlogCard: React.FC<Props> = ({ category, image, title, url }) => {
   const [hoverMiddle, setHoverMiddle] = useState(false);
+  const [fontSize, setFontSize] = useState("1rem");
   const cardRef = useRef<HTMLDivElement>(null);
-
-  //Handle Mouse mover for hover
-  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
-    if (cardRef.current) {
-      const { clientX, clientY } = event;
-      const { top, left, width, height } =
-        cardRef.current.getBoundingClientRect();
-
-      // Calculate the middle area (customize the size of the middle area as needed)
-      const middleVerticalStart = top + height * 0.25;
-      const middleVerticalEnd = top + height * 0.75;
-      const middleHorizontalStart = left + width * 0.25;
-      const middleHorizontalEnd = left + width * 0.75;
-
-      if (
-        clientX >= middleHorizontalStart &&
-        clientX <= middleHorizontalEnd &&
-        clientY >= middleVerticalStart &&
-        clientY <= middleVerticalEnd
-      ) {
-        setHoverMiddle(true);
-      } else {
-        setHoverMiddle(false);
-      }
-    }
-  };
+  const titleRef = useRef<HTMLHeadingElement>(null);
 
   //Handle badge color
   const badgeColor = (() => {
@@ -77,6 +53,28 @@ const BlogCard: React.FC<Props> = ({ category, image, title, url }) => {
     }
   })();
 
+  useEffect(() => {
+    const observer = new ResizeObserver((entries) => {
+      for (const entry of entries) {
+        if (entry.contentRect.width < 200) {
+          setFontSize("0.8rem");
+        } else if (entry.contentRect.width < 300) {
+          setFontSize("1rem");
+        } else {
+          setFontSize("1.25rem");
+        }
+      }
+    });
+
+    if (titleRef.current) {
+      observer.observe(titleRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   //Handle View Button Click
   const handleViewBtnClick = (url: string) => {
     if (typeof window !== "undefined") {
@@ -86,31 +84,60 @@ const BlogCard: React.FC<Props> = ({ category, image, title, url }) => {
       alert("An error occured");
     }
   };
+
+  //Handle Mouse mover for hover
+  const handleMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (cardRef.current) {
+      const { clientX, clientY } = event;
+      const { top, left, width, height } =
+        cardRef.current.getBoundingClientRect();
+
+      // Calculate the middle area (customize the size of the middle area as needed)
+      const middleVerticalStart = top + height * 0.25;
+      const middleVerticalEnd = top + height * 0.75;
+      const middleHorizontalStart = left + width * 0.25;
+      const middleHorizontalEnd = left + width * 0.75;
+
+      if (
+        clientX >= middleHorizontalStart &&
+        clientX <= middleHorizontalEnd &&
+        clientY >= middleVerticalStart &&
+        clientY <= middleVerticalEnd
+      ) {
+        setHoverMiddle(true);
+      } else {
+        setHoverMiddle(false);
+      }
+    }
+  };
+
   return (
     <div
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setHoverMiddle(false)}
-      className=" h-full m-8 flex w-96 flex flex-wrap rounded-3xl  bg-white overflow-y-auto relative group select-none"
+      className=" h-auto m-8 flex w-72 flex flex-wrap rounded-3xl  bg-white overflow-y-auto relative group select-none"
     >
-      <div className="relative">
+      <div className="relative w-full">
         <Image
           src={"/" + image}
           alt={title}
-          layout="responsive"
-          width={350}
-          height={200}
-          className="rounded-t-xl self-center justify-self-center"
+          width={100}
+          height={100}
+          className="h-28 md:h-40  w-72  rounded-t-xl self-center justify-self-center "
         />
         <span
-          className={`${badgeColor} ${badgeTextColor} text-sm md:text-md
-        absolute bottom-0 right-0 me-2 px-2.5 py-1.5 rounded-3xl w-fit m-4 text-center text-ellipsis h-auto`}
+          className={`${badgeColor} ${badgeTextColor} text-sm md:text-md absolute bottom-0 right-0 me-2 px-2.5 py-1.5 rounded-3xl w-fit m-4 text-center text-ellipsis h-auto`}
         >
           {category}
         </span>
       </div>
 
-      <h3 className="text-black font-montserrat justify-center px-0.5 text-center text-lg">
+      <h3
+        ref={titleRef}
+        className="text-black font-montserrat justify-center px-0.5 text-center"
+        style={{ fontSize }}
+      >
         {" "}
         {title}
       </h3>

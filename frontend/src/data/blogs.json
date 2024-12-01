@@ -49,6 +49,56 @@
       "author": "By : Sarah J.",
       "time": "Just Now",
       "url": "www.apple.com"
+    },
+    {
+      "id": 6,
+      "category": "Article",
+      "image": "blog/blogDummy.jpg",
+      "title": "Mozilla's Role in Advancing Web Accessibility",
+      "description": "Discover Mozilla's dedication to making the web accessible for everyone through various initiatives and tools, ensuring inclusivity and usability for all.",
+      "author": "By : Sarah J.",
+      "time": "Just Now",
+      "url": "www.apple.com"
+    },
+    {
+      "id": 7,
+      "category": "Article",
+      "image": "blog/blogDummy.jpg",
+      "title": "Mozilla's Role in Advancing Web Accessibility",
+      "description": "Discover Mozilla's dedication to making the web accessible for everyone through various initiatives and tools, ensuring inclusivity and usability for all.",
+      "author": "By : Sarah J.",
+      "time": "Just Now",
+      "url": "www.apple.com"
+    },
+    {
+      "id": 8,
+      "category": "Article",
+      "image": "blog/blogDummy.jpg",
+      "title": "Mozilla's Role in Advancing Web Accessibility",
+      "description": "Discover Mozilla's dedication to making the web accessible for everyone through various initiatives and tools, ensuring inclusivity and usability for all.",
+      "author": "By : Sarah J.",
+      "time": "Just Now",
+      "url": "www.apple.com"
+    },
+    {
+      "id": 9,
+      "category": "Article",
+      "image": "blog/blogDummy.jpg",
+      "title": "Mozilla's Role in Advancing Web Accessibility",
+      "description": "Discover Mozilla's dedication to making the web accessible for everyone through various initiatives and tools, ensuring inclusivity and usability for all.",
+      "author": "By : Sarah J.",
+      "time": "Just Now",
+      "url": "www.apple.com"
+    },
+    {
+      "id": 10,
+      "category": "Article",
+      "image": "blog/blogDummy.jpg",
+      "title": "Mozilla's Role in Advancing Web Accessibility",
+      "description": "Discover Mozilla's dedication to making the web accessible for everyone through various initiatives and tools, ensuring inclusivity and usability for all.",
+      "author": "By : Sarah J.",
+      "time": "Just Now",
+      "url": "www.apple.com"
     }
   ]
 }
