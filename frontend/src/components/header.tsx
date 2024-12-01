@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
-  faMoon,
-  faSun,
+  // faMoon,
+  // faSun,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import AnimatedButton from "./animatedBtn";
@@ -14,7 +14,7 @@ import { useDrawerContext } from "@/contextApi/drawerState";
 import { motion } from "framer-motion";
 
 function Header() {
-  const [darkmode, setDarkmode] = useState(false);
+  // const [darkmode, setDarkmode] = useState(false);
   const router = useRouter();
   const { toggleDrawer } = useDrawerContext();
   const { open } = useDrawerContext();
@@ -50,9 +50,9 @@ function Header() {
   };
 
   //Toggle Darkmode
-  const toggleDarkMode = () => {
-    setDarkmode(!darkmode);
-  };
+  // const toggleDarkMode = () => {
+  //   setDarkmode(!darkmode);
+  // };
 
   return (
     <div className="sticky top-0 z-50">

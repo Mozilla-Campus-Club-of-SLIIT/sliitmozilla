@@ -26,7 +26,7 @@ function Page() {
   // }, []);
 
   return (
-    <div className="h-screen w-screen overflow-y-auto bg-slate-100 overflow-x-hidden">
+    <div className="min-h-screen min-w-screen overflow-y-auto bg-slate-100 overflow-x-hidden">
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
@@ -52,16 +52,16 @@ function Page() {
         </div>
       </div>
       <MainBlogDesc />
-      <div className="h-60 md:h-80 w-auto md:p-4 md:m-2 p-2 flex flex-row animate-marquee space-x-4 justify-center items-center hover:animate-none overflow-x-auto overflow-y-hidden">
-        {/* {allBlogs.slice(0, itemsPerPage).map((blog) => ( */}
+      <div className="h-60 md:h-auto  w-screen overscroll-contain flex flex-row animate-marquee space-x-4 hover:animate-none justify-start items-center overflow-x-auto overflow-y-hidden scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-customOrange scrollbar-track-slate-100 ">
         {allBlogs.map((blog) => (
-          <BlogCard
-            key={blog.id}
-            category={blog.category}
-            image={blog.image}
-            title={blog.title}
-            url={blog.url}
-          />
+          <div key={blog.id} className="flex-shrink-0">
+            <BlogCard
+              category={blog.category}
+              image={blog.image}
+              title={blog.title}
+              url={blog.url}
+            />
+          </div>
         ))}
       </div>
     </div>
