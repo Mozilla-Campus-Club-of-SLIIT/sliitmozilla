@@ -71,7 +71,7 @@ function Carousel() {
                   <div className="flex items-center gap-x-2 m-2 text-white">
                     <Image
                       alt="calendar"
-                      src="/calendar-icon.png"
+                      src="/icons/calendar-icon.png"
                       width={20}
                       height={20}
                       unoptimized
@@ -82,7 +82,7 @@ function Carousel() {
                   <div className="flex items-center gap-x-2 m-2 text-white">
                     <Image
                       alt="location"
-                      src="/location-icon.png"
+                      src="/icons/location-icon.png"
                       width={20}
                       height={20}
                       unoptimized
