@@ -116,7 +116,7 @@ const BlogCard: React.FC<Props> = ({ category, image, title, url }) => {
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setHoverMiddle(false)}
-      className=" h-auto m-8 flex w-72 flex flex-wrap rounded-3xl  bg-white overflow-y-auto relative group select-none"
+      className=" h-auto m-8 flex w-72 flex flex-wrap rounded-xl  bg-white overflow-y-auto relative group select-none"
     >
       <div className="relative w-full">
         <Image
