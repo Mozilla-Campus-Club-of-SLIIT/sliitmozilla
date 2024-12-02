@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-// import { Button } from '@/components/ui/button';
+import AnimatedEventButton from "./animatedEventBtn";
+
 interface Props {
   image: string;
   title: string;
@@ -16,8 +17,17 @@ const EventCard: React.FC<Props> = ({
   date,
   location,
 }) => {
+  //Handle View Button Click
+  const handleViewBtnClick = (url: string) => {
+    if (typeof window !== "undefined") {
+      window.open(url, "_blank");
+    } else {
+      console.error("Window object not available.");
+      alert("An error occured");
+    }
+  };
   return (
-    <div className="h-500 m-4 flex w-80 flex-col rounded-bl-lg rounded-br-lg rounded-tl-lg rounded-tr-lg  bg-white">
+    <div className="h-500 m-4 flex w-80 flex-col rounded-bl-lg rounded-br-lg rounded-tl-lg rounded-tr-lg  bg-customOrange bg-opacity-5 items-center justofy-center">
       <Image src={"/" + image} alt={title} width={350} height={200} />
       <h3 className="text-black font-montserrat mt-4 justify-center px-0.5 text-center text-xl">
         {" "}
@@ -46,9 +56,10 @@ const EventCard: React.FC<Props> = ({
       <p className="text-black font-raleway ml-8 mr-4 mt-4 justify-center text-base">
         {description}
       </p>
-      <button className='bg-customOrange hover:bg-orange-400 font-raleway mx-auto mb-4 mt-4 h-12 w-52 rounded-lg bg-orange text-base font-bold text-white'>
-        View More
-      </button>
+      <AnimatedEventButton
+        name="View More"
+        handleButtonClick={() => handleViewBtnClick("www.apple.com")}
+      />
     </div>
   );
 };

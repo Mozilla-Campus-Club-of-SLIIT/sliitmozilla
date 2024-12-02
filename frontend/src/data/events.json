@@ -3,8 +3,8 @@
     {
       "id": 1,
       "category": "upcomingevent",
-      "image": "event.png",
-      "title": "Introduction to Git & GitHub",
+      "image": "event/event.png",
+      "title": "Introductionere to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",
       "description": "A session on Git & GitHub has been conducted by GitHub Campus Expert Chamod Shenka."
@@ -12,8 +12,8 @@
     {
       "id": 2,
       "category": "upcomingevent",
-      "image": "event.png",
-      "title": "Introduction to Git & GitHub",
+      "image": "event/event.png",
+      "title": "Introductions to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",
       "description": "A session on Git & GitHub has been conducted by GitHub Campus Expert Chamod Shenka."
@@ -21,7 +21,7 @@
     {
       "id": 3,
       "category": "upcomingevent",
-      "image": "event.png",
+      "image": "event/event.png",
       "title": "Introduction to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",
@@ -30,8 +30,8 @@
     {
       "id": 4,
       "category": "upcomingevent",
-      "image": "event.png",
-      "title": "Introduction to Git & GitHub",
+      "image": "event/event.png",
+      "title": "Introductionere to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",
       "description": "A session on Git & GitHub has been conducted by GitHub Campus Expert Chamod Shenka."
@@ -39,7 +39,7 @@
     {
       "id": 5,
       "category": "pastevent",
-      "image": "event.png",
+      "image": "event/event.png",
       "title": "Introduction to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",
@@ -48,7 +48,7 @@
     {
       "id": 6,
       "category": "pastevent",
-      "image": "event.png",
+      "image": "event/event.png",
       "title": "Introduction to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",
@@ -57,7 +57,7 @@
     {
       "id": 7,
       "category": "pastevent",
-      "image": "event.png",
+      "image": "event/event.png",
       "title": "Introduction to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",
@@ -66,7 +66,7 @@
     {
       "id": 8,
       "category": "pastevent",
-      "image": "event.png",
+      "image": "event/event.png",
       "title": "Introduction to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",
@@ -75,7 +75,7 @@
     {
       "id": 9,
       "category": "webinar",
-      "image": "event.png",
+      "image": "event/event.png",
       "title": "Introduction to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",
@@ -84,7 +84,7 @@
     {
       "id": 10,
       "category": "webinar",
-      "image": "event.png",
+      "image": "event/event.png",
       "title": "Introduction to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",
@@ -93,7 +93,7 @@
     {
       "id": 11,
       "category": "webinar",
-      "image": "event.png",
+      "image": "event/event.png",
       "title": "Introduction to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",
@@ -102,7 +102,7 @@
     {
       "id": 12,
       "category": "webinar",
-      "image": "event.png",
+      "image": "event/event.png",
       "title": "Introduction to Git & GitHub",
       "date": "19/07/2019",
       "location": "SLIIT",

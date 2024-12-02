@@ -22,7 +22,7 @@ const AnimatedBlogBtn: FC<AnimatedButtonProps> = ({
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
     >
       <button
-        className="relative flex items-center text-neutral-700 m-2 space-x-2 p-1.5 rounded-3xl
+        className="relative flex items-center text-neutral-700 m-2 space-x-2 p-1.5 rounded-xl
     bg-btn-bg-blog bg-cover bg-center
     backdrop-filter backdrop-blur-lg bg-opacity-80
     bg-white/10 border border-white/20
