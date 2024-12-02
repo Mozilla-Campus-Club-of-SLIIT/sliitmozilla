@@ -37,7 +37,7 @@ const EventCard: React.FC<Props> = ({
         <div className="ml-8 mr-4 flex flex-row items-center justify-center">
           <Image
             alt="location"
-            src={"/calendar-icon.png"}
+            src={"/icons/calendar-icon.png"}
             width={20}
             height={100}
           />
@@ -46,7 +46,7 @@ const EventCard: React.FC<Props> = ({
         <div className="ml-8 mr-4 flex flex-row items-center justify-center">
           <Image
             alt="location"
-            src={"/location-icon.png"}
+            src={"/icons/location-icon.png"}
             width={20}
             height={100}
           />
