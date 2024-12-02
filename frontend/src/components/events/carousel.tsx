@@ -64,7 +64,7 @@ function Carousel() {
                 unoptimized
                 className="absolute inset-0"
               />
-              <div className="absolute right-4 top-4 bg-orange-400 bg-opacity-30 p-4 rounded-xl text-white max-w-md p-2">
+              <div className="absolute ml-3 mr-3 md:ml-0 md:mr-0 md:right-4 top-4 bg-orange-400 bg-opacity-30 p-4 rounded-xl text-white max-w-md p-2">
                 <h2 className="text-xl font-bold">{event.title}</h2>
                 <p className="text-sm mt-2">{event.description}</p>
                 <div className="text-black mt-4 flex flex-row items-center w-full justify-center">
