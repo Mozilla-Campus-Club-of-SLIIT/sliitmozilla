@@ -1,9 +1,13 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Drawer from "@/components/drawer";
 import Header from "@/components/header";
+import Head from "next/head";
 import eventData from "@/data/events.json";
-import EventCard from "@/components/eventCard";
+import EventCard from "@/components/events/eventCard";
+import Carousel from "@/components/events/carousel";
+
+
 
 const Page: React.FC = () => {
   const [currentPageUpcoming, setCurrentPageUpcoming] = useState(0);
@@ -72,89 +76,20 @@ const Page: React.FC = () => {
     (event) => event.category === "webinar"
   );
 
+ 
+
   return (
-    <div className="h-screen w-screen bg-white">
+    <div className="min-h-screen min-w-screen overflow-y-auto bg-slate-100 overflow-x-hidden">
+      <Head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
       <Header />
       <Drawer />
-      <div className="bg-white">
-        <h1 className="font-montserrat mb-4 mt-8 justify-center text-center text-4xl md:text-7xl font-bold text-customOrange">
-          Upcoming Events
-        </h1>
-        <div className="flex flex-row flex-wrap items-center justify-center">
-          {upcomingEvents
-            .slice(
-              currentPageUpcoming * itemsPerPage,
-              (currentPageUpcoming + 1) * itemsPerPage
-            )
-            .map((event) => (
-              <EventCard
-                key={event.id}
-                image={event.image}
-                title={event.title}
-                description={event.description}
-                date={event.date}
-                location={event.location}
-              />
-            ))}
-        </div>
-        {renderPagination(
-          upcomingEvents.length,
-          currentPageUpcoming,
-          setCurrentPageUpcoming
-        )}
-
-        <h2 className="text-black font-montserrat mb-4 mt-8 justify-center text-center text-4xl  md:text-5xl font-bold">
-          Past Events
-        </h2>
-        <div className="flex flex-row flex-wrap items-center justify-center">
-          {pastEvents
-            .slice(
-              currentPagePast * itemsPerPage,
-              (currentPagePast + 1) * itemsPerPage
-            )
-            .map((event) => (
-              <EventCard
-                key={event.id}
-                image={event.image}
-                title={event.title}
-                description={event.description}
-                date={event.date}
-                location={event.location}
-              />
-            ))}
-        </div>
-        {renderPagination(
-          pastEvents.length,
-          currentPagePast,
-          setCurrentPagePast
-        )}
-
-        <h2 className="text-black font-montserrat mb-4 mt-8 justify-center text-center text-4xl  md:text-5xl font-bold">
-          Webinars
-        </h2>
-        <div className="flex flex-row flex-wrap items-center justify-center">
-          {webinar
-            .slice(
-              currentPageWebinar * itemsPerPage,
-              (currentPageWebinar + 1) * itemsPerPage
-            )
-            .map((event) => (
-              <EventCard
-                key={event.id}
-                image={event.image}
-                title={event.title}
-                description={event.description}
-                date={event.date}
-                location={event.location}
-              />
-            ))}
-        </div>
-        {renderPagination(
-          webinar.length,
-          currentPageWebinar,
-          setCurrentPageWebinar
-        )}
-      </div>
+      <Carousel />
+      
     </div>
   );
 };
