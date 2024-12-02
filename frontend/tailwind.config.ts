@@ -9,6 +9,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
       keyframes: {
         marquee: {
           "0%": { transform: "translateX(-100%)" },
@@ -27,9 +30,11 @@ const config: Config = {
       backgroundImage: {
         'btn-bg-blog': "url('/blog/viewBlog.jpg')", 
         'text-gradient': 'linear-gradient(0deg,  rgba(255,173,64,0.6474964985994398) 0%, rgba(255,217,185,1) 100%)',
+        'contact-us-bg': "url('/contactus/contactUsBg.png')",
       },
       backgroundSize: {
         '90%': '90%',
+        '80%': '80%',
       },
     },
   },
