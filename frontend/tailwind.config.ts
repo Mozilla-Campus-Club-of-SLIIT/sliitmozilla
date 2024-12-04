@@ -13,6 +13,8 @@ const config: Config = {
         montserrat: ['Montserrat', 'sans-serif'],
         zilla: ['Zilla Slab', 'serif'],
         inter: ['Inter', 'sans-serif'],
+        consolas: ['Consolas', 'monospace'],
+        cabinet: ['"Cabinet Grotesk Variable"', 'sans-serif'],
       },
       keyframes: {
         marquee: {
@@ -33,6 +35,7 @@ const config: Config = {
         'btn-bg-blog': "url('/blog/viewBlog.jpg')", 
         'text-gradient': 'linear-gradient(0deg,  rgba(255,173,64,0.6474964985994398) 0%, rgba(255,217,185,1) 100%)',
         'contact-us-bg': "url('/contactus/contactUsBg.png')",
+        'home-bg': "url('/home/frame22.png')",
       },
       backgroundSize: {
         '90%': '90%',
