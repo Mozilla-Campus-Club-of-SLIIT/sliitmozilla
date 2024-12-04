@@ -17,7 +17,7 @@ function Page() {
     router.push("/contactus");
   };
   return (
-    <div className="min-h-screen min-w-screen overflow-y-auto bg-slate-100 overflow-x-hidden">
+    <div className="h-auto min-w-screen overflow-y-auto bg-slate-100 overflow-x-hidden">
       <Head>
         <link
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap"
@@ -26,7 +26,7 @@ function Page() {
       </Head>
       <Header />
       <Drawer />
-      <div className="flex flex-col items-center justify-center m-2 w-full h-72 md:h-96 text-center">
+      <div className="flex flex-col items-center justify-center m-2 p-1.5 w-full h-auto md:h-96 text-center">
         <h1 className="font-montserrat text-black text-2xl md:text-5xl font-bold">
           Mission-driven. People-powered.
         </h1>
@@ -71,12 +71,12 @@ function Page() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center m-2 w-full h-72 md:h-96 text-center">
+      <div className="flex flex-col items-center justify-center m-2 w-full h-auto md:h-auto text-center">
         <h1 className="font-montserrat text-black text-2xl md:text-5xl font-bold">
           Areas of Focus
         </h1>
-        <div className="flex flex-row items-center justify-center space-x-4 w-full h-auto m-4 p-2">
-          <div className="flex flex-col items-center justify-center w-1/2 h-1/2">
+        <div className="flex flex-row flex-wrap items-center justify-center space-x-4 w-full h-auto m-4 p-2">
+          <div className="flex flex-col items-center justify-center w-full md:w-2/6 h-auto">
             <Image
               src="/home/people.png"
               width={50}
@@ -93,7 +93,7 @@ function Page() {
               lorem ipsum doler sit
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-1/2 h-1/2">
+          <div className="flex flex-col items-center justify-center w-full md:w-2/6 h-auto">
             <Image
               src="/home/googleCode.png"
               width={50}
@@ -110,7 +110,7 @@ function Page() {
               lorem ipsum doler sit
             </p>
           </div>
-          <div className="flex flex-col items-center justify-center w-1/2 h-1/2">
+          <div className="flex flex-col items-center justify-center w-full md:w-2/6 h-auto">
             <Image
               src="/home/commercial.png"
               width={50}
@@ -129,14 +129,14 @@ function Page() {
           </div>
         </div>
       </div>
-      <div className="flex flex-row items-center justify-center m-2 w-full h-72 md:h-96 text-center">
+      <div className="flex flex-row flex-wrap items-center justify-center m-2 w-full h-auto md:h-auto text-center">
         <Image
           src="/home/masscot.jpg"
           width={500}
           height={500}
           alt="Hero Image"
           unoptimized
-          className="cursor-pointer object-contain mr-2 rounded-xl select-none pointer-events-none"
+          className="cursor-pointer object-contain mr-2 mb-2 md:mb-0 rounded-xl select-none pointer-events-none"
         />
 
         <div className="flex flex-col items-center justify-center w-1/2 h-1/2">

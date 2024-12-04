@@ -44,7 +44,7 @@ function Drawer() {
         <hr className="shadow-lg font-bold" />
         <button
           className="w-full text-black hover:bg-customOrange hover:text-white  py-2 px-4 rounded"
-          onClick={() => navigatePage("/home")}
+          onClick={() => navigatePage("/")}
         >
           Home
         </button>
