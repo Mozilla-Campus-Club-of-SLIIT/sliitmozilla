@@ -27,7 +27,7 @@ const EventCard: React.FC<Props> = ({
     }
   };
   return (
-    <div className="h-500 m-4 flex w-80 flex-col rounded-bl-lg rounded-br-lg rounded-tl-lg rounded-tr-lg  bg-customOrange bg-opacity-5 items-center justofy-center">
+    <div className="h-500 m-4 flex w-80 flex-col rounded-bl-lg rounded-br-lg rounded-tl-lg rounded-tr-lg  bg-customOrange bg-opacity-5 items-center justify-center">
       <Image src={"/" + image} alt={title} width={350} height={200} />
       <h3 className="text-black font-montserrat mt-4 justify-center px-0.5 text-center text-xl">
         {" "}

@@ -11,6 +11,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         montserrat: ['Montserrat', 'sans-serif'],
+        zilla: ['Zilla Slab', 'serif'],
+        inter: ['Inter', 'sans-serif'],
       },
       keyframes: {
         marquee: {
