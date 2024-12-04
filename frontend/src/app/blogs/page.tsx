@@ -10,21 +10,9 @@ import MainBlogDesc from "@/components/blog/mainBlogDesc";
 import Footer from "@/components/footer";
 
 function Page() {
-  // const [itemsPerPage, setItemsPerPage] = useState(6);
 
   //All blogs
   const allBlogs = blogData.blogData;
-
-  //Use effect to limit the items rendered based on Page
-  // useEffect(() => {
-  //   const handleResize = () => {
-  //     setItemsPerPage(window.innerWidth < 768 ? 3 : 6);
-  //   };
-
-  //   window.addEventListener("resize", handleResize);
-  //   handleResize();
-  //   return () => window.removeEventListener("resize", handleResize);
-  // }, []);
 
   return (
     <div className="min-h-screen min-w-screen overflow-y-auto bg-slate-100 overflow-x-hidden">

@@ -28,7 +28,7 @@ export const Emailer = async (
         html: `
               <div>
                 <p>${body}</p>
-                <img src="${logoUrl}" alt="CricBoost Logo" style="width: 100px; height: auto;" />
+                <img src="${logoUrl}" alt="Mozilla Logo" style="width: 100px; height: auto;" />
               </div>
           `,
       };

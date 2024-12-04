@@ -5,8 +5,6 @@ import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
-  // faMoon,
-  // faSun,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import AnimatedButton from "./animatedBtn";
@@ -14,7 +12,6 @@ import { useDrawerContext } from "@/contextApi/drawerState";
 import { motion } from "framer-motion";
 
 function Header() {
-  // const [darkmode, setDarkmode] = useState(false);
   const router = useRouter();
   const { toggleDrawer } = useDrawerContext();
   const { open } = useDrawerContext();
@@ -144,11 +141,6 @@ function Header() {
             name="Join SLIIT Mozilla"
             handleButtonClick={handleAboutClick}
           />
-          {/* <FontAwesomeIcon
-            icon={darkmode ? faSun : faMoon} // Change icon based on dark mode status
-            className="w-4 h-4 md:w-6 md:h-6 cursor-pointer text-black m-2 p-2"
-            onClick={toggleDarkMode}
-          /> */}
         </div>
       </nav>
     </div>
