@@ -96,7 +96,7 @@ function Page() {
                 infosliitmcc@gmail.com
               </a>
             </div>
-            <div className="flex flex-col flex-wrap items-center justify-between flex-grow bg-orange-200 bg-opacity-30 hover:bg-customOrange hover:bg-opacity-15 p-4 rounded-xl">
+            <div className="flex flex-col flex-wrap items-center justify-between flex-grow bg-orange-200 bg-opacity-30 hover:bg-customOrange hover:bg-opacity-15 p-4 rounded-xl mt-4 md:mt-0">
               <Image
                 alt="location"
                 src={"/icons/phone.png"}
