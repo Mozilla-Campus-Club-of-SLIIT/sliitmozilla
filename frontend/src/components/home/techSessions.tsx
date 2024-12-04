@@ -7,7 +7,7 @@ function TechSessions() {
       <h1 className="font-montserrat text-customOrange text-2xl md:text-3xl font-bold">
         Tech sessions
       </h1>
-      <div className="flex flex-row items-center justify-around space-x-4 w-full h-auto  p-2">
+      <div className="flex flex-row flex-wrap items-center justify-around space-x-4 w-full h-auto  p-2">
         <TechCard
           title="Docker 101: An Introduction to Docker"
           category="Tech"
