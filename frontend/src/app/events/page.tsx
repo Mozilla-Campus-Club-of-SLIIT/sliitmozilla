@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 "use client";
 import React, { useState, useEffect } from "react";
 import Drawer from "@/components/drawer";
@@ -8,6 +9,7 @@ import EventCard from "@/components/events/eventCard";
 import Carousel from "@/components/events/carousel";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import Footer from "@/components/footer";
 
 const Page: React.FC = () => {
   const [currentPageWebinar, setCurrentPageWebinar] = useState(0);
@@ -118,6 +120,7 @@ const Page: React.FC = () => {
         currentPageWebinar,
         setCurrentPageWebinar
       )}
+      <Footer />
     </div>
   );
 };

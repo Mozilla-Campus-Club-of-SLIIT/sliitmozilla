@@ -1,6 +1,8 @@
+/* eslint-disable @next/next/no-page-custom-font */
 "use client";
 import Box from "@/components/board/box";
 import Drawer from "@/components/drawer";
+import Footer from "@/components/footer";
 import Header from "@/components/header";
 import Head from "next/head";
 import React from "react";
@@ -69,6 +71,7 @@ function Page() {
           />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

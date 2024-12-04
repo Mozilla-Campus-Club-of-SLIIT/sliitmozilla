@@ -7,6 +7,7 @@ import Header from "@/components/header";
 import blogData from "@/data/blogs.json";
 import BlogCard from "@/components/blog/blogCard";
 import MainBlogDesc from "@/components/blog/mainBlogDesc";
+import Footer from "@/components/footer";
 
 function Page() {
   // const [itemsPerPage, setItemsPerPage] = useState(6);
@@ -64,6 +65,7 @@ function Page() {
           </div>
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

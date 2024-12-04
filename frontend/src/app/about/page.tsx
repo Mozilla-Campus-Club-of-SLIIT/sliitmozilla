@@ -5,6 +5,7 @@ import Head from "next/head";
 import Drawer from "@/components/drawer";
 import Header from "@/components/header";
 import Image from "next/image";
+import Footer from "@/components/footer";
 
 function Page() {
   return (
@@ -131,6 +132,7 @@ function Page() {
           unoptimized
         />
       </div>
+      <Footer />
     </div>
   );
 }
