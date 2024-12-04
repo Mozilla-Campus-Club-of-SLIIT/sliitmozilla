@@ -62,7 +62,7 @@ export async function POST(req: Request) {
     // Respond with success
     return NextResponse.json({
       success: true,
-      message: "Content shared successfully.",
+      message: "Email submitted successfully.",
     });
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   } catch (error: any) {

@@ -10,9 +10,36 @@ import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import HomeAnibtn from "@/components/home/homeAnibtn";
+import HomeFooter from "@/components/homeFooter";
+
+interface FormValues {
+  email: string;
+}
 
 function Page() {
   const router = useRouter();
+
+  // Yup Schema for Validation
+  const validationSchema = Yup.object().shape({
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+  });
+
+  // Formik Initial Values
+  const initialValues: FormValues = {
+    email: "",
+  };
+
+  // Form Submit Handler
+  const handleSubmit = (values: typeof initialValues) => {
+    console.log("Form Submitted:", values);
+    alert("You have subscribed to our newsletter!");
+  };
+
   const handleMemberClick = () => {
     router.push("/contactus");
   };
@@ -139,11 +166,11 @@ function Page() {
           className="cursor-pointer object-contain mr-2 mb-2 md:mb-0 rounded-xl select-none pointer-events-none"
         />
 
-        <div className="flex flex-col items-center justify-center w-1/2 h-1/2">
+        <div className="flex flex-col items-center justify-center w-full md:w-1/2 h-1/2">
           <h1 className="font-zilla text-customOrange text-2xl md:text-5xl font-bold">
             Hello future Mozillians!
           </h1>
-          <p className="font-inter text-black text-lg md:text-2xl  m-4 p-4 w-4/5">
+          <p className="font-inter text-black text-lg md:text-2xl  m-4 p-4 w-full md:w-4/5">
             Im Moxy, the mascot of the Mozilla Campus Club of SLIIT. Let&apos;s
             take a walk through the
           </p>
@@ -151,14 +178,14 @@ function Page() {
       </div>
       <PastEvents />
       <a
-         className="font-inter text-blue-400 text-sm  m-4 p-4 w-full flex items-center justify-center decoration-solid decoration-blue-400 decoration-4"
+        className="font-inter text-blue-400 text-sm  m-4 p-4 w-full flex items-center justify-center decoration-solid decoration-blue-400 decoration-4"
         href="https://www.youtube.com/@mozillacampusclubofsliit2158"
       >
         Read more about SLIIT Mozilla&apos;s Past Events
       </a>
       <TechSessions />
       <a
-         className="font-inter text-blue-400 text-sm  m-4 p-4 w-full flex items-center justify-center decoration-solid decoration-blue-400 decoration-4"
+        className="font-inter text-blue-400 text-sm  m-4 p-4 w-full flex items-center justify-center decoration-solid decoration-blue-400 decoration-4"
         href="https://www.youtube.com/@mozillacampusclubofsliit2158"
       >
         Read more about SLIIT Mozilla&apos;s Tech Sessions
@@ -170,6 +197,49 @@ function Page() {
       >
         Read more about SLIIT Mozilla&apos;s Blogs
       </a>
+      <div className="flex flex-row flex-wrap justify-around items-center w-full relative border-b h-auto bg-home-bg m-2">
+        <div className="flex flex-col items-center justify-center  w-full h-full  text-center bg-slate/10 backdrop-blur-xl">
+          <h1 className="font-montserrat text-white text-3xl md:text-3xl font-bold">
+            <span className="bg-black text-white px-1">
+              Get (great!) Mozilla news
+            </span>
+          </h1>
+          <p className="font-inter text-black text-lg md:text-2xl  m-4 p-4">
+            Subscribe to receive our newsletters to be informed on everything
+            about SLIIT Mozilla!
+          </p>
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={handleSubmit}
+          >
+            <Form className="flex flex-col items-start justify-start w-full h-auto p-4">
+              <div className="flex flex-row flex-wrap items-center justify-center w-full h-auto">
+                <div className="flex flex-col items-center justify-center w-full md:w-2/5 p-4 m-2 h-auto">
+                  <Field
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    className="w-full h-12 p-4 rounded-xl text-customOrange"
+                  />
+                  <ErrorMessage
+                    name="email"
+                    component="div"
+                    className="text-red-500 text-sm text-center mt-4"
+                  />
+                </div>
+              </div>
+              <div className="flex flex-row flex-wrap items-center justify-center w-full h-auto p-4">
+                <HomeAnibtn name="Send" handleButtonClick={() => {}} />
+              </div>
+              <p className="font-inter text-black text-sm  m-4 p-4 w-full flex items-center justify-center ">
+                We will only send you SLIIT Mozilla related information.
+              </p>
+            </Form>
+          </Formik>
+        </div>
+      </div>
+      <HomeFooter/>
     </div>
   );
 }

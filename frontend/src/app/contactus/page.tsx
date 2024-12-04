@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 "use client";
 import Drawer from "@/components/drawer";
 import Header from "@/components/header";
@@ -7,6 +8,7 @@ import Image from "next/image";
 import ContactAnimatedButton from "@/components/contactUs/contactAnimateBtn";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import Footer from "@/components/footer";
 
 interface FormValues {
   name: string;
@@ -195,6 +197,7 @@ function Page() {
           </Formik>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
