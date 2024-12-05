@@ -75,6 +75,14 @@ function Drawer() {
         <hr className="shadow-lg font-bold" />
         <button
           className="w-full text-black hover:bg-customOrange  py-2 px-4 rounded hover:bg-customOrange hover:text-white"
+          onClick={() => navigatePage("/board")}
+        >
+          Board
+        </button>
+        <hr className="shadow-lg font-bold" />
+        <hr className="shadow-lg font-bold" />
+        <button
+          className="w-full text-black hover:bg-customOrange  py-2 px-4 rounded hover:bg-customOrange hover:text-white"
           onClick={() => navigatePage("/contactus")}
         >
           Contact
