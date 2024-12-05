@@ -17,19 +17,19 @@ function Footer() {
         <div className="flex flex-row flex-wrap items-center justify-center w-auto h-auto">
           <nav className="flex flex-col items-center justify-center w-auto h-auto">
             <a
-              href="https://www.mozilla.org/en-US/about/"
+              href="http://localhost:3000"
               className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2"
             >
               HOME
             </a>
             <a
-              href="https://www.mozilla.org/en-US/contribute/"
+              href="http://localhost:3000/about"
               className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2"
             >
               ABOUT US
             </a>
             <a
-              href="https://www.mozilla.org/en-US/contact/"
+              href="http://localhost:3000/blogs"
               className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2"
             >
               BLOG
@@ -37,20 +37,20 @@ function Footer() {
           </nav>
           <nav className="flex flex-col items-center justify-center w-auto h-auto">
             <a
-              href="https://www.mozilla.org/en-US/about/"
+              href="http://localhost:3000/board"
               className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2"
             >
               BOARD
             </a>
             <a
-              href="https://www.mozilla.org/en-US/contribute/"
+              href="http://localhost:3000/events"
               className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2"
             >
               EVENT
             </a>
           </nav>
         </div>
-        <div className="flex flex-col items-center justify-center w-auto h-auto">
+        <div className="flex flex-col items-center justify-center w-full h-auto">
           <p className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2">
             BE THE FIRST TO HERE OUR LATEST CONTENT AND NEWS
           </p>
@@ -62,7 +62,7 @@ function Footer() {
             />
             <button
               title="subscribe"
-              className="absolute  h-10 right-0 top-0 h-full w-10 bg-customOrange text-white flex items-center justify-center"
+              className="absolute  h-10 right-0 top-0  w-10 bg-customOrange text-white flex items-center justify-center"
             >
               <FontAwesomeIcon icon={faRightFromBracket} />
             </button>

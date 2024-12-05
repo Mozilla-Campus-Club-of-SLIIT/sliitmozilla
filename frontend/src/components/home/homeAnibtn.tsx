@@ -9,7 +9,7 @@ interface HomeAnibtnProps {
 const HomeAnibtn: FC<HomeAnibtnProps> = ({ name, handleButtonClick }) => {
   return (
     <motion.div
-       className="box w-full md:w-2/5 h-full"
+       className="box w-2/5 md:w-1/5 h-full"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       transition={{ type: "spring", stiffness: 400, damping: 10 }}
