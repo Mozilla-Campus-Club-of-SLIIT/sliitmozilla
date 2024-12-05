@@ -213,9 +213,9 @@ function Page() {
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
-            <Form className="flex flex-col items-start justify-start w-full h-auto p-4">
+            <Form className="flex flex-col items-center justify-center w-full h-auto p-4">
               <div className="flex flex-col flex-wrap items-center justify-center w-full h-auto">
-                <div className="flex flex-col items-center justify-center w-full md:w-2/5 p-4 m-2 h-auto">
+                <div className="flex flex-col items-center justify-center w-full md:w-2/5 p-4  h-auto">
                   <Field
                     type="email"
                     name="email"
@@ -230,7 +230,7 @@ function Page() {
                 </div>
                 <HomeAnibtn name="Send" handleButtonClick={() => {}} />
               </div>
-              <p className="font-inter text-black text-sm  md:m-4 p-4 w-full flex items-center justify-center ">
+              <p className="font-inter text-black text-sm  md:m-4  w-full flex items-center justify-center ">
                 We will only send you SLIIT Mozilla related information.
               </p>
             </Form>
