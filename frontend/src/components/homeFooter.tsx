@@ -18,8 +18,8 @@ function HomeFooter() {
             alt="facebook"
             src={"/icons/facebook_black.png"}
             width={20}
-            height={100}
-            className="w-30 h-30 mr-2"
+            height={20}
+            className="mr-2"
             onClick={() => {}}
             unoptimized
           />
@@ -27,8 +27,8 @@ function HomeFooter() {
             alt="instagram"
             src={"/icons/instagram_black.png"}
             width={20}
-            height={100}
-            className="w-30 h-30 mr-2"
+            height={20}
+            className="mr-2"
             onClick={() => {}}
             unoptimized
           />
@@ -36,8 +36,8 @@ function HomeFooter() {
             alt="twitter"
             src={"/icons/twitter_black.png"}
             width={20}
-            height={100}
-            className="w-30 h-30 mr-2"
+            height={20}
+            className="mr-2"
             onClick={() => {}}
             unoptimized
           />
@@ -45,8 +45,8 @@ function HomeFooter() {
             alt="linkedln"
             src={"/icons/linkedln_black.png"}
             width={20}
-            height={100}
-            className="w-30 h-30 mr-2"
+            height={20}
+            className="mr-2"
             onClick={() => {}}
             unoptimized
           />
@@ -54,8 +54,8 @@ function HomeFooter() {
             alt="youtube"
             src={"/icons/youtube_black.png"}
             width={20}
-            height={100}
-            className="w-30 h-30 mr-2"
+            height={20}
+            className="mr-2"
             onClick={() => {}}
             unoptimized
           />
