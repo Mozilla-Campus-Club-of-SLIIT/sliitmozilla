@@ -21,6 +21,7 @@ function HomeFooter() {
             height={100}
             className="w-30 h-30 mr-2"
             onClick={() => {}}
+            unoptimized
           />
           <Image
             alt="instagram"
@@ -29,6 +30,7 @@ function HomeFooter() {
             height={100}
             className="w-30 h-30 mr-2"
             onClick={() => {}}
+            unoptimized
           />
           <Image
             alt="twitter"
@@ -37,6 +39,7 @@ function HomeFooter() {
             height={100}
             className="w-30 h-30 mr-2"
             onClick={() => {}}
+            unoptimized
           />
           <Image
             alt="linkedln"
@@ -45,6 +48,7 @@ function HomeFooter() {
             height={100}
             className="w-30 h-30 mr-2"
             onClick={() => {}}
+            unoptimized
           />
           <Image
             alt="youtube"
@@ -53,6 +57,7 @@ function HomeFooter() {
             height={100}
             className="w-30 h-30 mr-2"
             onClick={() => {}}
+            unoptimized
           />
         </div>
       </div>
