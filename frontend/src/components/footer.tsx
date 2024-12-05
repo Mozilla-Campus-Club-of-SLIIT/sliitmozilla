@@ -5,7 +5,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <div className="w-full h-auto bg-slate-100">
+    <div className="w-full h-auto bg-slate-100 shadow-[0px_-4px_6px_rgba(0,0,0,0.1)] mt-4">
       <div className="flex flex-row flex-wrap items-center justify-between w-full h-auto p-4">
         <Image
           alt="mozillaLogo"
@@ -14,43 +14,48 @@ function Footer() {
           height={100}
           className="w-30 h-30 mr-2"
         />
-        <div className="flex flex-row flex-wrap items-center justify-center w-auto h-auto">
-          <nav className="flex flex-col items-center justify-center w-auto h-auto">
-            <a
-              href="http://localhost:3000"
-              className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2"
-            >
-              HOME
-            </a>
-            <a
-              href="http://localhost:3000/about"
-              className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2"
-            >
-              ABOUT US
-            </a>
-            <a
-              href="http://localhost:3000/blogs"
-              className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2"
-            >
-              BLOG
-            </a>
-          </nav>
-          <nav className="flex flex-col items-center justify-center w-auto h-auto">
-            <a
-              href="http://localhost:3000/board"
-              className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2"
-            >
-              BOARD
-            </a>
-            <a
-              href="http://localhost:3000/events"
-              className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2"
-            >
-              EVENT
-            </a>
-          </nav>
+        <div className="flex flex-row flex-wrap items-start justify-center w-auto h-auto">
+          <div className="flex flex-col items-center justify-center w-auto h-auto">
+            <nav className="flex flex-col items-center justify-center w-auto h-auto">
+              <a
+                href="http://localhost:3000"
+                className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2 hover:text-customOrange"
+              >
+                HOME
+              </a>
+              <a
+                href="http://localhost:3000/about"
+                className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2 hover:text-customOrange"
+              >
+                ABOUT US
+              </a>
+              <a
+                href="http://localhost:3000/blogs"
+                className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2 hover:text-customOrange"
+              >
+                BLOG
+              </a>
+            </nav>
+          </div>
+          <div className="flex flex-col items-center justify-center w-auto h-auto">
+            <nav className="flex flex-col items-center justify-center w-auto h-auto">
+              <a
+                href="http://localhost:3000/board"
+                className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2 hover:text-customOrange"
+              >
+                BOARD
+              </a>
+              <a
+                href="http://localhost:3000/events"
+                className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2 hover:text-customOrange"
+              >
+                EVENT
+              </a>
+            </nav>
+          </div>
         </div>
-        <div className="flex flex-col items-center justify-center w-full h-auto">
+
+        <div className="flex flex-col items-center justify-center md:w-auto w-full h-auto">
           <p className="text-lg font-inter text-center text-black font-consolas w-80 mt-2 mb-2">
             BE THE FIRST TO HERE OUR LATEST CONTENT AND NEWS
           </p>
